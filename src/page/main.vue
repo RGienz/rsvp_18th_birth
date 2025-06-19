@@ -402,20 +402,20 @@ seconds: '00',
 
 const eventDate = new Date('June 19, 2025 16:00:00').getTime(); // Event Date & Time
 // let countdownInterval: NodeJS.Timeout;
-let countdownInterval: NodeJS.Timeout;
+// let countdownInterval: NodeJS.Timeout;
 
 const updateCountdown = () => {
 const now = new Date().getTime();
 const distance = eventDate - now;
 
-if (distance < 0) {
-  clearInterval(countdownInterval);
-  countdown.days = '00';
-  countdown.hours = '00';
-  countdown.minutes = '00';
-  countdown.seconds = '00';
-  return;
-}
+// if (distance < 0) {
+//   clearInterval(countdownInterval);
+//   countdown.days = '00';
+//   countdown.hours = '00';
+//   countdown.minutes = '00';
+//   countdown.seconds = '00';
+//   return;
+// }
 
 countdown.days = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
 countdown.hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
@@ -424,14 +424,14 @@ countdown.seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart
 };
 
 
-onMounted(() => {
-updateCountdown(); // Initial call
-countdownInterval = setInterval(updateCountdown, 1000);
-});
+// onMounted(() => {
+// updateCountdown(); // Initial call
+// countdownInterval = setInterval(updateCountdown, 1000);
+// });
 
-onUnmounted(() => {
-clearInterval(countdownInterval);
-});
+// onUnmounted(() => {
+// clearInterval(countdownInterval);
+// });
 
 
 
