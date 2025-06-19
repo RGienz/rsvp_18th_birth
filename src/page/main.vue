@@ -441,10 +441,7 @@ clearInterval(countdownInterval);
 
 
 <style>
-/* --- Font Imports --- */
-/* Playfair Display for headings - elegant serif */
-/* Lora for body text - readable serif */
-/* Dancing Script for accent text - elegant script */
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700;900&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* --- Global Font Application --- */
